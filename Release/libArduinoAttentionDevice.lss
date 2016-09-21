@@ -1,0 +1,574 @@
+In archive libArduinoAttentionDevice.a:
+
+SoftwareSerialAttentionDevice.o:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .group        00000008  00000000  00000000  00000034  2**2
+                  CONTENTS, READONLY, EXCLUDE, GROUP, LINK_ONCE_DISCARD
+  1 .text         00000000  00000000  00000000  0000003c  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .data         00000000  00000000  00000000  0000003c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  3 .bss          00000000  00000000  00000000  0000003c  2**0
+                  ALLOC
+  4 .rodata.str1.1 00000003  00000000  00000000  0000003c  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .text._ZN29SoftwareSerialAttentionDevice11sendCommandEPKcbm 0000008e  00000000  00000000  0000003f  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  6 .text._ZThn31_N29SoftwareSerialAttentionDevice11sendCommandEPKcbm 00000010  00000000  00000000  000000cd  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  7 .text._ZN29SoftwareSerialAttentionDevice12readResponseEmb 000001b6  00000000  00000000  000000dd  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  8 .text._ZThn31_N29SoftwareSerialAttentionDevice12readResponseEmb 00000006  00000000  00000000  00000293  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  9 .text._ZN29SoftwareSerialAttentionDevice20doesResponseContainsEPKc 00000012  00000000  00000000  00000299  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 10 .text._ZThn31_N29SoftwareSerialAttentionDevice20doesResponseContainsEPKc 00000006  00000000  00000000  000002ab  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 11 .text._ZN29SoftwareSerialAttentionDevice16waitUntilReceiveEPKcj 0000007c  00000000  00000000  000002b1  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 12 .text._ZThn31_N29SoftwareSerialAttentionDevice16waitUntilReceiveEPKcj 00000006  00000000  00000000  0000032d  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 13 .text._ZN29SoftwareSerialAttentionDevice20sendCommandExpectingEPKcS1_bm 0000005e  00000000  00000000  00000333  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 14 .text._ZThn31_N29SoftwareSerialAttentionDevice20sendCommandExpectingEPKcS1_bm 00000018  00000000  00000000  00000391  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 15 .text._ZN29SoftwareSerialAttentionDeviceC2Ehh 00000034  00000000  00000000  000003a9  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 16 .text._ZN29SoftwareSerialAttentionDevice20wasResponseFullyReadEv 0000000a  00000000  00000000  000003dd  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .text._ZN29SoftwareSerialAttentionDevice14findInResponseEPKc 00000006  00000000  00000000  000003e7  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 18 .text._ZN29SoftwareSerialAttentionDevice13discardBufferEv 00000006  00000000  00000000  000003ed  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .rodata._ZTV29SoftwareSerialAttentionDevice 00000028  00000000  00000000  000003f3  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 20 .comment      00000012  00000000  00000000  0000041b  2**0
+                  CONTENTS, READONLY
+
+Disassembly of section .text._ZN29SoftwareSerialAttentionDevice11sendCommandEPKcbm:
+
+00000000 <_ZN29SoftwareSerialAttentionDevice11sendCommandEPKcbm>:
+   0:	8f 92       	push	r8
+   2:	9f 92       	push	r9
+   4:	af 92       	push	r10
+   6:	bf 92       	push	r11
+   8:	cf 92       	push	r12
+   a:	df 92       	push	r13
+   c:	ef 92       	push	r14
+   e:	ff 92       	push	r15
+  10:	0f 93       	push	r16
+  12:	1f 93       	push	r17
+  14:	cf 93       	push	r28
+  16:	df 93       	push	r29
+  18:	1f 92       	push	r1
+  1a:	cd b7       	in	r28, 0x3d	; 61
+  1c:	de b7       	in	r29, 0x3e	; 62
+  1e:	4c 01       	movw	r8, r24
+  20:	5b 01       	movw	r10, r22
+  22:	68 01       	movw	r12, r16
+  24:	79 01       	movw	r14, r18
+  26:	fc 01       	movw	r30, r24
+  28:	ef 5d       	subi	r30, 0xDF	; 223
+  2a:	fe 4f       	sbci	r31, 0xFE	; 254
+  2c:	11 82       	std	Z+1, r1	; 0x01
+  2e:	10 82       	st	Z, r1
+  30:	dc 01       	movw	r26, r24
+  32:	91 96       	adiw	r26, 0x21	; 33
+  34:	1c 92       	st	X, r1
+  36:	91 97       	sbiw	r26, 0x21	; 33
+  38:	ed 91       	ld	r30, X+
+  3a:	fc 91       	ld	r31, X
+  3c:	02 84       	ldd	r0, Z+10	; 0x0a
+  3e:	f3 85       	ldd	r31, Z+11	; 0x0b
+  40:	e0 2d       	mov	r30, r0
+  42:	49 83       	std	Y+1, r20	; 0x01
+  44:	09 95       	icall
+  46:	49 81       	ldd	r20, Y+1	; 0x01
+  48:	44 23       	and	r20, r20
+  4a:	01 f0       	breq	.+0      	; 0x4c <_ZN29SoftwareSerialAttentionDevice11sendCommandEPKcbm+0x4c>
+  4c:	60 e0       	ldi	r22, 0x00	; 0
+  4e:	70 e0       	ldi	r23, 0x00	; 0
+  50:	c4 01       	movw	r24, r8
+  52:	0e 94 00 00 	call	0	; 0x0 <_ZN29SoftwareSerialAttentionDevice11sendCommandEPKcbm>
+  56:	b5 01       	movw	r22, r10
+  58:	c4 01       	movw	r24, r8
+  5a:	0e 94 00 00 	call	0	; 0x0 <_ZN29SoftwareSerialAttentionDevice11sendCommandEPKcbm>
+  5e:	d4 01       	movw	r26, r8
+  60:	ed 91       	ld	r30, X+
+  62:	fc 91       	ld	r31, X
+  64:	02 88       	ldd	r0, Z+18	; 0x12
+  66:	f3 89       	ldd	r31, Z+19	; 0x13
+  68:	e0 2d       	mov	r30, r0
+  6a:	20 e0       	ldi	r18, 0x00	; 0
+  6c:	b7 01       	movw	r22, r14
+  6e:	a6 01       	movw	r20, r12
+  70:	c4 01       	movw	r24, r8
+  72:	0f 90       	pop	r0
+  74:	df 91       	pop	r29
+  76:	cf 91       	pop	r28
+  78:	1f 91       	pop	r17
+  7a:	0f 91       	pop	r16
+  7c:	ff 90       	pop	r15
+  7e:	ef 90       	pop	r14
+  80:	df 90       	pop	r13
+  82:	cf 90       	pop	r12
+  84:	bf 90       	pop	r11
+  86:	af 90       	pop	r10
+  88:	9f 90       	pop	r9
+  8a:	8f 90       	pop	r8
+  8c:	09 94       	ijmp
+
+Disassembly of section .text._ZThn31_N29SoftwareSerialAttentionDevice11sendCommandEPKcbm:
+
+00000000 <_ZThn31_N29SoftwareSerialAttentionDevice11sendCommandEPKcbm>:
+   0:	0f 93       	push	r16
+   2:	1f 93       	push	r17
+   4:	4f 97       	sbiw	r24, 0x1f	; 31
+   6:	0e 94 00 00 	call	0	; 0x0 <_ZThn31_N29SoftwareSerialAttentionDevice11sendCommandEPKcbm>
+   a:	1f 91       	pop	r17
+   c:	0f 91       	pop	r16
+   e:	08 95       	ret
+
+Disassembly of section .text._ZN29SoftwareSerialAttentionDevice12readResponseEmb:
+
+00000000 <_ZN29SoftwareSerialAttentionDevice12readResponseEmb>:
+   0:	2f 92       	push	r2
+   2:	3f 92       	push	r3
+   4:	4f 92       	push	r4
+   6:	5f 92       	push	r5
+   8:	6f 92       	push	r6
+   a:	7f 92       	push	r7
+   c:	8f 92       	push	r8
+   e:	9f 92       	push	r9
+  10:	af 92       	push	r10
+  12:	bf 92       	push	r11
+  14:	cf 92       	push	r12
+  16:	df 92       	push	r13
+  18:	ef 92       	push	r14
+  1a:	ff 92       	push	r15
+  1c:	0f 93       	push	r16
+  1e:	1f 93       	push	r17
+  20:	cf 93       	push	r28
+  22:	df 93       	push	r29
+  24:	cd b7       	in	r28, 0x3d	; 61
+  26:	de b7       	in	r29, 0x3e	; 62
+  28:	27 97       	sbiw	r28, 0x07	; 7
+  2a:	0f b6       	in	r0, 0x3f	; 63
+  2c:	f8 94       	cli
+  2e:	de bf       	out	0x3e, r29	; 62
+  30:	0f be       	out	0x3f, r0	; 63
+  32:	cd bf       	out	0x3d, r28	; 61
+  34:	9f 83       	std	Y+7, r25	; 0x07
+  36:	8e 83       	std	Y+6, r24	; 0x06
+  38:	4a 01       	movw	r8, r20
+  3a:	5b 01       	movw	r10, r22
+  3c:	2d 83       	std	Y+5, r18	; 0x05
+  3e:	0e 94 00 00 	call	0	; 0x0 <_ZN29SoftwareSerialAttentionDevice12readResponseEmb>
+  42:	6b 01       	movw	r12, r22
+  44:	7c 01       	movw	r14, r24
+  46:	8e 81       	ldd	r24, Y+6	; 0x06
+  48:	9f 81       	ldd	r25, Y+7	; 0x07
+  4a:	8f 5d       	subi	r24, 0xDF	; 223
+  4c:	9e 4f       	sbci	r25, 0xFE	; 254
+  4e:	1c 01       	movw	r2, r24
+  50:	2d 81       	ldd	r18, Y+5	; 0x05
+  52:	21 11       	cpse	r18, r1
+  54:	00 c0       	rjmp	.+0      	; 0x56 <_ZN29SoftwareSerialAttentionDevice12readResponseEmb+0x56>
+  56:	dc 01       	movw	r26, r24
+  58:	1d 92       	st	X+, r1
+  5a:	1c 92       	st	X, r1
+  5c:	f1 01       	movw	r30, r2
+  5e:	01 90       	ld	r0, Z+
+  60:	f0 81       	ld	r31, Z
+  62:	e0 2d       	mov	r30, r0
+  64:	fc 83       	std	Y+4, r31	; 0x04
+  66:	eb 83       	std	Y+3, r30	; 0x03
+  68:	2e 81       	ldd	r18, Y+6	; 0x06
+  6a:	3f 81       	ldd	r19, Y+7	; 0x07
+  6c:	2d 5d       	subi	r18, 0xDD	; 221
+  6e:	3e 4f       	sbci	r19, 0xFE	; 254
+  70:	3a 83       	std	Y+2, r19	; 0x02
+  72:	29 83       	std	Y+1, r18	; 0x01
+  74:	81 e0       	ldi	r24, 0x01	; 1
+  76:	d9 01       	movw	r26, r18
+  78:	8c 93       	st	X, r24
+  7a:	ae 81       	ldd	r26, Y+6	; 0x06
+  7c:	bf 81       	ldd	r27, Y+7	; 0x07
+  7e:	ed 91       	ld	r30, X+
+  80:	fc 91       	ld	r31, X
+  82:	11 97       	sbiw	r26, 0x01	; 1
+  84:	04 80       	ldd	r0, Z+4	; 0x04
+  86:	f5 81       	ldd	r31, Z+5	; 0x05
+  88:	e0 2d       	mov	r30, r0
+  8a:	cd 01       	movw	r24, r26
+  8c:	09 95       	icall
+  8e:	18 16       	cp	r1, r24
+  90:	19 06       	cpc	r1, r25
+  92:	04 f0       	brlt	.+0      	; 0x94 <_ZN29SoftwareSerialAttentionDevice12readResponseEmb+0x94>
+  94:	0e 94 00 00 	call	0	; 0x0 <_ZN29SoftwareSerialAttentionDevice12readResponseEmb>
+  98:	dc 01       	movw	r26, r24
+  9a:	cb 01       	movw	r24, r22
+  9c:	8c 19       	sub	r24, r12
+  9e:	9d 09       	sbc	r25, r13
+  a0:	ae 09       	sbc	r26, r14
+  a2:	bf 09       	sbc	r27, r15
+  a4:	88 15       	cp	r24, r8
+  a6:	99 05       	cpc	r25, r9
+  a8:	aa 05       	cpc	r26, r10
+  aa:	bb 05       	cpc	r27, r11
+  ac:	00 f0       	brcs	.+0      	; 0xae <_ZN29SoftwareSerialAttentionDevice12readResponseEmb+0xae>
+  ae:	0e 94 00 00 	call	0	; 0x0 <_ZN29SoftwareSerialAttentionDevice12readResponseEmb>
+  b2:	2b 01       	movw	r4, r22
+  b4:	3c 01       	movw	r6, r24
+  b6:	ae 81       	ldd	r26, Y+6	; 0x06
+  b8:	bf 81       	ldd	r27, Y+7	; 0x07
+  ba:	ed 91       	ld	r30, X+
+  bc:	fc 91       	ld	r31, X
+  be:	11 97       	sbiw	r26, 0x01	; 1
+  c0:	04 80       	ldd	r0, Z+4	; 0x04
+  c2:	f5 81       	ldd	r31, Z+5	; 0x05
+  c4:	e0 2d       	mov	r30, r0
+  c6:	cd 01       	movw	r24, r26
+  c8:	09 95       	icall
+  ca:	8c 01       	movw	r16, r24
+  cc:	18 16       	cp	r1, r24
+  ce:	19 06       	cpc	r1, r25
+  d0:	04 f4       	brge	.+0      	; 0xd2 <_ZN29SoftwareSerialAttentionDevice12readResponseEmb+0xd2>
+  d2:	f1 01       	movw	r30, r2
+  d4:	80 81       	ld	r24, Z
+  d6:	91 81       	ldd	r25, Z+1	; 0x01
+  d8:	98 01       	movw	r18, r16
+  da:	28 0f       	add	r18, r24
+  dc:	39 1f       	adc	r19, r25
+  de:	2f 3f       	cpi	r18, 0xFF	; 255
+  e0:	31 05       	cpc	r19, r1
+  e2:	01 f0       	breq	.+0      	; 0xe4 <_ZN29SoftwareSerialAttentionDevice12readResponseEmb+0xe4>
+  e4:	00 f0       	brcs	.+0      	; 0xe6 <_ZN29SoftwareSerialAttentionDevice12readResponseEmb+0xe6>
+  e6:	0f ef       	ldi	r16, 0xFF	; 255
+  e8:	10 e0       	ldi	r17, 0x00	; 0
+  ea:	08 1b       	sub	r16, r24
+  ec:	19 0b       	sbc	r17, r25
+  ee:	a9 81       	ldd	r26, Y+1	; 0x01
+  f0:	ba 81       	ldd	r27, Y+2	; 0x02
+  f2:	1c 92       	st	X, r1
+  f4:	10 16       	cp	r1, r16
+  f6:	11 06       	cpc	r1, r17
+  f8:	04 f4       	brge	.+0      	; 0xfa <_ZN29SoftwareSerialAttentionDevice12readResponseEmb+0xfa>
+  fa:	0e 94 00 00 	call	0	; 0x0 <_ZN29SoftwareSerialAttentionDevice12readResponseEmb>
+  fe:	6b 01       	movw	r12, r22
+ 100:	7c 01       	movw	r14, r24
+ 102:	f1 01       	movw	r30, r2
+ 104:	60 81       	ld	r22, Z
+ 106:	71 81       	ldd	r23, Z+1	; 0x01
+ 108:	6f 5d       	subi	r22, 0xDF	; 223
+ 10a:	7f 4f       	sbci	r23, 0xFF	; 255
+ 10c:	2e 81       	ldd	r18, Y+6	; 0x06
+ 10e:	3f 81       	ldd	r19, Y+7	; 0x07
+ 110:	62 0f       	add	r22, r18
+ 112:	73 1f       	adc	r23, r19
+ 114:	a8 01       	movw	r20, r16
+ 116:	c9 01       	movw	r24, r18
+ 118:	0e 94 00 00 	call	0	; 0x0 <_ZN29SoftwareSerialAttentionDevice12readResponseEmb>
+ 11c:	d1 01       	movw	r26, r2
+ 11e:	2d 91       	ld	r18, X+
+ 120:	3c 91       	ld	r19, X
+ 122:	11 97       	sbiw	r26, 0x01	; 1
+ 124:	82 0f       	add	r24, r18
+ 126:	93 1f       	adc	r25, r19
+ 128:	8d 93       	st	X+, r24
+ 12a:	9c 93       	st	X, r25
+ 12c:	ee 81       	ldd	r30, Y+6	; 0x06
+ 12e:	ff 81       	ldd	r31, Y+7	; 0x07
+ 130:	e8 0f       	add	r30, r24
+ 132:	f9 1f       	adc	r31, r25
+ 134:	11 a2       	std	Z+33, r1	; 0x21
+ 136:	0e 94 00 00 	call	0	; 0x0 <_ZN29SoftwareSerialAttentionDevice12readResponseEmb>
+ 13a:	10 16       	cp	r1, r16
+ 13c:	11 06       	cpc	r1, r17
+ 13e:	04 f0       	brlt	.+0      	; 0x140 <_ZN29SoftwareSerialAttentionDevice12readResponseEmb+0x140>
+ 140:	8b 01       	movw	r16, r22
+ 142:	9c 01       	movw	r18, r24
+ 144:	0c 19       	sub	r16, r12
+ 146:	1d 09       	sbc	r17, r13
+ 148:	2e 09       	sbc	r18, r14
+ 14a:	3f 09       	sbc	r19, r15
+ 14c:	02 33       	cpi	r16, 0x32	; 50
+ 14e:	11 05       	cpc	r17, r1
+ 150:	21 05       	cpc	r18, r1
+ 152:	31 05       	cpc	r19, r1
+ 154:	00 f4       	brcc	.+0      	; 0x156 <_ZN29SoftwareSerialAttentionDevice12readResponseEmb+0x156>
+ 156:	dc 01       	movw	r26, r24
+ 158:	cb 01       	movw	r24, r22
+ 15a:	84 19       	sub	r24, r4
+ 15c:	95 09       	sbc	r25, r5
+ 15e:	a6 09       	sbc	r26, r6
+ 160:	b7 09       	sbc	r27, r7
+ 162:	88 15       	cp	r24, r8
+ 164:	99 05       	cpc	r25, r9
+ 166:	aa 05       	cpc	r26, r10
+ 168:	bb 05       	cpc	r27, r11
+ 16a:	00 f4       	brcc	.+0      	; 0x16c <_ZN29SoftwareSerialAttentionDevice12readResponseEmb+0x16c>
+ 16c:	e9 81       	ldd	r30, Y+1	; 0x01
+ 16e:	fa 81       	ldd	r31, Y+2	; 0x02
+ 170:	80 81       	ld	r24, Z
+ 172:	81 11       	cpse	r24, r1
+ 174:	00 c0       	rjmp	.+0      	; 0x176 <_ZN29SoftwareSerialAttentionDevice12readResponseEmb+0x176>
+ 176:	d1 01       	movw	r26, r2
+ 178:	8d 91       	ld	r24, X+
+ 17a:	9c 91       	ld	r25, X
+ 17c:	2b 81       	ldd	r18, Y+3	; 0x03
+ 17e:	3c 81       	ldd	r19, Y+4	; 0x04
+ 180:	82 1b       	sub	r24, r18
+ 182:	93 0b       	sbc	r25, r19
+ 184:	27 96       	adiw	r28, 0x07	; 7
+ 186:	0f b6       	in	r0, 0x3f	; 63
+ 188:	f8 94       	cli
+ 18a:	de bf       	out	0x3e, r29	; 62
+ 18c:	0f be       	out	0x3f, r0	; 63
+ 18e:	cd bf       	out	0x3d, r28	; 61
+ 190:	df 91       	pop	r29
+ 192:	cf 91       	pop	r28
+ 194:	1f 91       	pop	r17
+ 196:	0f 91       	pop	r16
+ 198:	ff 90       	pop	r15
+ 19a:	ef 90       	pop	r14
+ 19c:	df 90       	pop	r13
+ 19e:	cf 90       	pop	r12
+ 1a0:	bf 90       	pop	r11
+ 1a2:	af 90       	pop	r10
+ 1a4:	9f 90       	pop	r9
+ 1a6:	8f 90       	pop	r8
+ 1a8:	7f 90       	pop	r7
+ 1aa:	6f 90       	pop	r6
+ 1ac:	5f 90       	pop	r5
+ 1ae:	4f 90       	pop	r4
+ 1b0:	3f 90       	pop	r3
+ 1b2:	2f 90       	pop	r2
+ 1b4:	08 95       	ret
+
+Disassembly of section .text._ZThn31_N29SoftwareSerialAttentionDevice12readResponseEmb:
+
+00000000 <_ZThn31_N29SoftwareSerialAttentionDevice12readResponseEmb>:
+   0:	4f 97       	sbiw	r24, 0x1f	; 31
+   2:	0c 94 00 00 	jmp	0	; 0x0 <_ZThn31_N29SoftwareSerialAttentionDevice12readResponseEmb>
+
+Disassembly of section .text._ZN29SoftwareSerialAttentionDevice20doesResponseContainsEPKc:
+
+00000000 <_ZN29SoftwareSerialAttentionDevice20doesResponseContainsEPKc>:
+   0:	81 96       	adiw	r24, 0x21	; 33
+   2:	0e 94 00 00 	call	0	; 0x0 <_ZN29SoftwareSerialAttentionDevice20doesResponseContainsEPKc>
+   6:	21 e0       	ldi	r18, 0x01	; 1
+   8:	89 2b       	or	r24, r25
+   a:	01 f4       	brne	.+0      	; 0xc <_ZN29SoftwareSerialAttentionDevice20doesResponseContainsEPKc+0xc>
+   c:	20 e0       	ldi	r18, 0x00	; 0
+   e:	82 2f       	mov	r24, r18
+  10:	08 95       	ret
+
+Disassembly of section .text._ZThn31_N29SoftwareSerialAttentionDevice20doesResponseContainsEPKc:
+
+00000000 <_ZThn31_N29SoftwareSerialAttentionDevice20doesResponseContainsEPKc>:
+   0:	4f 97       	sbiw	r24, 0x1f	; 31
+   2:	0c 94 00 00 	jmp	0	; 0x0 <_ZThn31_N29SoftwareSerialAttentionDevice20doesResponseContainsEPKc>
+
+Disassembly of section .text._ZN29SoftwareSerialAttentionDevice16waitUntilReceiveEPKcj:
+
+00000000 <_ZN29SoftwareSerialAttentionDevice16waitUntilReceiveEPKcj>:
+   0:	8f 92       	push	r8
+   2:	9f 92       	push	r9
+   4:	af 92       	push	r10
+   6:	bf 92       	push	r11
+   8:	cf 92       	push	r12
+   a:	df 92       	push	r13
+   c:	ef 92       	push	r14
+   e:	ff 92       	push	r15
+  10:	0f 93       	push	r16
+  12:	1f 93       	push	r17
+  14:	cf 93       	push	r28
+  16:	df 93       	push	r29
+  18:	ec 01       	movw	r28, r24
+  1a:	6b 01       	movw	r12, r22
+  1c:	8c 01       	movw	r16, r24
+  1e:	0f 5d       	subi	r16, 0xDF	; 223
+  20:	1f 4f       	sbci	r17, 0xFF	; 255
+  22:	7c 01       	movw	r14, r24
+  24:	8d ed       	ldi	r24, 0xDD	; 221
+  26:	e8 1a       	sub	r14, r24
+  28:	8e ef       	ldi	r24, 0xFE	; 254
+  2a:	f8 0a       	sbc	r15, r24
+  2c:	4a 01       	movw	r8, r20
+  2e:	a1 2c       	mov	r10, r1
+  30:	b1 2c       	mov	r11, r1
+  32:	b6 01       	movw	r22, r12
+  34:	c8 01       	movw	r24, r16
+  36:	0e 94 00 00 	call	0	; 0x0 <_ZN29SoftwareSerialAttentionDevice16waitUntilReceiveEPKcj>
+  3a:	00 97       	sbiw	r24, 0x00	; 0
+  3c:	01 f4       	brne	.+0      	; 0x3e <_ZN29SoftwareSerialAttentionDevice16waitUntilReceiveEPKcj+0x3e>
+  3e:	e8 81       	ld	r30, Y
+  40:	f9 81       	ldd	r31, Y+1	; 0x01
+  42:	02 88       	ldd	r0, Z+18	; 0x12
+  44:	f3 89       	ldd	r31, Z+19	; 0x13
+  46:	e0 2d       	mov	r30, r0
+  48:	d7 01       	movw	r26, r14
+  4a:	2c 91       	ld	r18, X
+  4c:	b5 01       	movw	r22, r10
+  4e:	a4 01       	movw	r20, r8
+  50:	ce 01       	movw	r24, r28
+  52:	09 95       	icall
+  54:	89 2b       	or	r24, r25
+  56:	01 f4       	brne	.+0      	; 0x58 <_ZN29SoftwareSerialAttentionDevice16waitUntilReceiveEPKcj+0x58>
+  58:	8f ef       	ldi	r24, 0xFF	; 255
+  5a:	9f ef       	ldi	r25, 0xFF	; 255
+  5c:	00 c0       	rjmp	.+0      	; 0x5e <_ZN29SoftwareSerialAttentionDevice16waitUntilReceiveEPKcj+0x5e>
+  5e:	80 1b       	sub	r24, r16
+  60:	91 0b       	sbc	r25, r17
+  62:	df 91       	pop	r29
+  64:	cf 91       	pop	r28
+  66:	1f 91       	pop	r17
+  68:	0f 91       	pop	r16
+  6a:	ff 90       	pop	r15
+  6c:	ef 90       	pop	r14
+  6e:	df 90       	pop	r13
+  70:	cf 90       	pop	r12
+  72:	bf 90       	pop	r11
+  74:	af 90       	pop	r10
+  76:	9f 90       	pop	r9
+  78:	8f 90       	pop	r8
+  7a:	08 95       	ret
+
+Disassembly of section .text._ZThn31_N29SoftwareSerialAttentionDevice16waitUntilReceiveEPKcj:
+
+00000000 <_ZThn31_N29SoftwareSerialAttentionDevice16waitUntilReceiveEPKcj>:
+   0:	4f 97       	sbiw	r24, 0x1f	; 31
+   2:	0c 94 00 00 	jmp	0	; 0x0 <_ZThn31_N29SoftwareSerialAttentionDevice16waitUntilReceiveEPKcj>
+
+Disassembly of section .text._ZN29SoftwareSerialAttentionDevice20sendCommandExpectingEPKcS1_bm:
+
+00000000 <_ZN29SoftwareSerialAttentionDevice20sendCommandExpectingEPKcS1_bm>:
+   0:	cf 92       	push	r12
+   2:	df 92       	push	r13
+   4:	ef 92       	push	r14
+   6:	ff 92       	push	r15
+   8:	0f 93       	push	r16
+   a:	1f 93       	push	r17
+   c:	cf 93       	push	r28
+   e:	df 93       	push	r29
+  10:	ec 01       	movw	r28, r24
+  12:	6a 01       	movw	r12, r20
+  14:	42 2f       	mov	r20, r18
+  16:	98 01       	movw	r18, r16
+  18:	87 01       	movw	r16, r14
+  1a:	e8 81       	ld	r30, Y
+  1c:	f9 81       	ldd	r31, Y+1	; 0x01
+  1e:	00 88       	ldd	r0, Z+16	; 0x10
+  20:	f1 89       	ldd	r31, Z+17	; 0x11
+  22:	e0 2d       	mov	r30, r0
+  24:	09 95       	icall
+  26:	89 2b       	or	r24, r25
+  28:	01 f0       	breq	.+0      	; 0x2a <_ZN29SoftwareSerialAttentionDevice20sendCommandExpectingEPKcS1_bm+0x2a>
+  2a:	e8 81       	ld	r30, Y
+  2c:	f9 81       	ldd	r31, Y+1	; 0x01
+  2e:	06 84       	ldd	r0, Z+14	; 0x0e
+  30:	f7 85       	ldd	r31, Z+15	; 0x0f
+  32:	e0 2d       	mov	r30, r0
+  34:	b6 01       	movw	r22, r12
+  36:	ce 01       	movw	r24, r28
+  38:	df 91       	pop	r29
+  3a:	cf 91       	pop	r28
+  3c:	1f 91       	pop	r17
+  3e:	0f 91       	pop	r16
+  40:	ff 90       	pop	r15
+  42:	ef 90       	pop	r14
+  44:	df 90       	pop	r13
+  46:	cf 90       	pop	r12
+  48:	09 94       	ijmp
+  4a:	80 e0       	ldi	r24, 0x00	; 0
+  4c:	df 91       	pop	r29
+  4e:	cf 91       	pop	r28
+  50:	1f 91       	pop	r17
+  52:	0f 91       	pop	r16
+  54:	ff 90       	pop	r15
+  56:	ef 90       	pop	r14
+  58:	df 90       	pop	r13
+  5a:	cf 90       	pop	r12
+  5c:	08 95       	ret
+
+Disassembly of section .text._ZThn31_N29SoftwareSerialAttentionDevice20sendCommandExpectingEPKcS1_bm:
+
+00000000 <_ZThn31_N29SoftwareSerialAttentionDevice20sendCommandExpectingEPKcS1_bm>:
+   0:	ef 92       	push	r14
+   2:	ff 92       	push	r15
+   4:	0f 93       	push	r16
+   6:	1f 93       	push	r17
+   8:	4f 97       	sbiw	r24, 0x1f	; 31
+   a:	0e 94 00 00 	call	0	; 0x0 <_ZThn31_N29SoftwareSerialAttentionDevice20sendCommandExpectingEPKcS1_bm>
+   e:	1f 91       	pop	r17
+  10:	0f 91       	pop	r16
+  12:	ff 90       	pop	r15
+  14:	ef 90       	pop	r14
+  16:	08 95       	ret
+
+Disassembly of section .text._ZN29SoftwareSerialAttentionDeviceC2Ehh:
+
+00000000 <_ZN29SoftwareSerialAttentionDeviceC1Ehh>:
+   0:	cf 93       	push	r28
+   2:	df 93       	push	r29
+   4:	ec 01       	movw	r28, r24
+   6:	20 e0       	ldi	r18, 0x00	; 0
+   8:	0e 94 00 00 	call	0	; 0x0 <_ZN29SoftwareSerialAttentionDeviceC1Ehh>
+   c:	80 e0       	ldi	r24, 0x00	; 0
+   e:	90 e0       	ldi	r25, 0x00	; 0
+  10:	99 83       	std	Y+1, r25	; 0x01
+  12:	88 83       	st	Y, r24
+  14:	80 e0       	ldi	r24, 0x00	; 0
+  16:	90 e0       	ldi	r25, 0x00	; 0
+  18:	98 a3       	std	Y+32, r25	; 0x20
+  1a:	8f 8f       	std	Y+31, r24	; 0x1f
+  1c:	fe 01       	movw	r30, r28
+  1e:	ef 5d       	subi	r30, 0xDF	; 223
+  20:	fe 4f       	sbci	r31, 0xFE	; 254
+  22:	11 82       	std	Z+1, r1	; 0x01
+  24:	10 82       	st	Z, r1
+  26:	32 96       	adiw	r30, 0x02	; 2
+  28:	81 e0       	ldi	r24, 0x01	; 1
+  2a:	80 83       	st	Z, r24
+  2c:	19 a2       	std	Y+33, r1	; 0x21
+  2e:	df 91       	pop	r29
+  30:	cf 91       	pop	r28
+  32:	08 95       	ret
+
+Disassembly of section .text._ZN29SoftwareSerialAttentionDevice20wasResponseFullyReadEv:
+
+00000000 <_ZN29SoftwareSerialAttentionDevice20wasResponseFullyReadEv>:
+   0:	fc 01       	movw	r30, r24
+   2:	ed 5d       	subi	r30, 0xDD	; 221
+   4:	fe 4f       	sbci	r31, 0xFE	; 254
+   6:	80 81       	ld	r24, Z
+   8:	08 95       	ret
+
+Disassembly of section .text._ZN29SoftwareSerialAttentionDevice14findInResponseEPKc:
+
+00000000 <_ZN29SoftwareSerialAttentionDevice14findInResponseEPKc>:
+   0:	81 96       	adiw	r24, 0x21	; 33
+   2:	0c 94 00 00 	jmp	0	; 0x0 <_ZN29SoftwareSerialAttentionDevice14findInResponseEPKc>
+
+Disassembly of section .text._ZN29SoftwareSerialAttentionDevice13discardBufferEv:
+
+00000000 <_ZN29SoftwareSerialAttentionDevice13discardBufferEv>:
+   0:	fc 01       	movw	r30, r24
+   2:	11 a2       	std	Z+33, r1	; 0x21
+   4:	08 95       	ret
+
+AttentionDevice.o:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000000  00000000  00000000  00000034  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00000000  00000000  00000034  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  00000000  00000000  00000034  2**0
+                  ALLOC
+  3 .comment      00000012  00000000  00000000  00000034  2**0
+                  CONTENTS, READONLY
