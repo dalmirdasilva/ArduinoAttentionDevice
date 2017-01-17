@@ -115,7 +115,7 @@ public:
      * @return
      */
     inline unsigned int sendCommand(const char *command, bool append) {
-        return sendCommand(command, append, 1000);
+        return sendCommand(command, append, AT_DEVICE_DEFAULT_COMMAND_RESPONSE_TIMEOUT);
     }
 
     /**
